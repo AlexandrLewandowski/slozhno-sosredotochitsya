@@ -1,4 +1,9 @@
-/*
+:root {
+  --accent-color: #DB00FF;
+  --primary-color:#ff0070;
+  --font-size-base: 18px;
+  --font-main: "IBM Plex Mono", sans-serif;
+}/*
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
