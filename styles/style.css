@@ -1,6 +1,61 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
+.header{
+  background-image: url("../images/cover-image-dark.png");
+  background-size: cover;
+  background-position: center;
+background-repeat: no-repeat;
+  width: 1024px;
+  height: 768px;
+}
+
+.header__theme-menu-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 230px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.table__of-contents{
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 157px;
+  line-height: 83%;
+  color: var(--primary-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.text__idiom{
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  color: #000028;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  width:491px;
+  height: 71px;
+  margin: 0;
+}
+
+.content{
+  background-image: url("../images/cover-image-dark.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  color:var(--text-color);
+}
+/*.content::before{*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  top: 0; left: 0; right: 0; bottom: 0;*/
+/*  background: rgba(0, 0, 0, 0.6); !* Черный слой с прозрачностью 50% *!*/
+/*  z-index: 1;*/
+/*}*/
