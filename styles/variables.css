@@ -1,11 +1,16 @@
 :root {
   --accent-color: #ff0070;
-  --primary-color:#DB00FF;
+  --primary-color: #DB00FF;
+  --secondary-color: #000028;
   --text-color: #F1B2CE;
   --font-size-base: 18px;
   --font-main: "IBM Plex Mono", sans-serif;
+  --bg-color: var(--secondary-color);
+  --hover-color: rgba(255, 0, 112, 0.4);
+}
 
-}/*
+/*
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
