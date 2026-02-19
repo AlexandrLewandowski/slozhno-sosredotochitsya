@@ -88,10 +88,18 @@
     font-size: var(--font-size-base);
     color: var(--accent-color);
     background-color: inherit;
-    border: 1px solid var(--hover-color);
+    border: 1px solid var(--accent-color);
     width: 70px;
     margin-block-start: 20px;
     letter-spacing: 1px;
+  }
+
+  .header__theme-menu-button:hover {
+    border-color: var(--hover-color);
+  }
+
+  .header__theme-menu-button:focus {
+    border-bottom: 1px solid var(--accent-color);
   }
 
   .table__of-contents {

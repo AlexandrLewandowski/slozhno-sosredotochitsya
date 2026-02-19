@@ -8,7 +8,7 @@
   --bg-color: var(--secondary-color);
   --font-size-base: 18px;
   --font-main: "IBM Plex Mono", sans-serif;
-  --hover-color: rgba(50, 49, 45, 0.4);
+  --hover-color: rgba(53, 52, 48, 0.4);
   --bg-image: url(../images/cover-image-light.png);
 
 
@@ -25,6 +25,14 @@
   .header__theme-menu-button {
     color: var(--text-color);
     border: 1px solid var(--text-color);
+  }
+
+  .header__theme-menu-button:hover {
+    border-color: var(--hover-color);
+  }
+
+  .header__theme-menu-button:focus {
+    border-bottom: 1px solid var(--text-color);
   }
 
   .decorated-zone::before {
