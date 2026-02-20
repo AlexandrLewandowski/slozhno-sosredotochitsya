@@ -10,6 +10,8 @@
   --font-main: "IBM Plex Mono", sans-serif;
   --hover-color: rgba(53, 52, 48, 0.4);
   --bg-image: url(../images/cover-image-light.png);
+  --inline-section-padding: clamp(10px, 0.029rem + 2.54vw, 20px);
+  --block-section-padding: clamp(50px, 1.336rem + 7.63vw, 80px);
 
 
   /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */

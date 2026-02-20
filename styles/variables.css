@@ -7,6 +7,8 @@
   --font-main: "IBM Plex Mono", sans-serif;
   --bg-color: var(--secondary-color);
   --hover-color: rgba(255, 0, 112, 0.4);
+  --inline-section-padding: clamp(10px, 0.029rem + 2.54vw, 20px);
+  --block-section-padding: clamp(50px, 1.336rem + 7.63vw, 80px);
 }
 
 /*

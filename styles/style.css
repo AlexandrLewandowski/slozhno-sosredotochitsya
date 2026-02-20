@@ -14,7 +14,8 @@
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  padding: 0 20px 20px 20px;
+  padding-block-end: clamp(1.938rem, -4.444rem + 27.226vw, 8.625rem);
+  padding-inline: var(--inline-section-padding);
   max-width: 1440px;
 }
 
@@ -73,6 +74,7 @@
 
 .header__theme-menu {
   display: flex;
+  padding-block-start: 20px;
 }
 
 .header__theme-menu-button {
@@ -114,9 +116,7 @@
 .idiom {
   display: flex;
   max-width: 491px;
-  height: 71px;
   margin-left: auto;
-  margin-block-end: 89px;
   box-sizing: border-box;
 }
 
@@ -133,8 +133,15 @@
   font-size: var(--font-size-base);
   color: var(--text-color);
   line-height: 23px;
-  padding-inline: 20px;
-  max-width: 1440px;
+  padding-inline: clamp(0.625rem, 0.029rem + 2.545vw, 1.25rem);
+}
+
+.content__padding-start {
+  padding-block-start: clamp(2.5rem, 1.307rem + 5.089vw, 3.75rem);
+}
+
+.content__padding {
+  padding-block-end: var(--block-section-padding);
 }
 
 .content__quiestion {
@@ -143,7 +150,6 @@
   font-size: var(--font-size-base);
   line-height: 23px;
   gap: 20px;
-  padding-block-start: 60px;
 }
 
 .hard__concentrate-questuion {
@@ -154,7 +160,6 @@
 }
 
 .hard__concentrate-questuion__multidoph {
-  max-width: 649px;
   margin: 0;
 }
 
@@ -173,8 +178,6 @@
   font-size: var(--font-size-base);
   line-height: 23px;
   margin-block: 10px 0;
-  max-width: 649px;
-  max-height: 211px;
 }
 
 .content__link {
@@ -193,7 +196,6 @@
 }
 
 .decreased__attention {
-  padding-block-start: 80px;
 }
 
 .title__decor-decreased {
@@ -212,14 +214,11 @@
 }
 
 .decreased__attention-question {
-  width: 315px;
-  height: 47px;
   font-size: var(--font-size-base);
   color: var(--accent-color);
 }
 
 .advice__simple {
-  padding-block-start: 80px;
 }
 
 .advice__simple-better {
@@ -246,14 +245,9 @@
   padding-inline-start: 0;
 }
 
-.content__images {
-  margin-top: 80px;
-}
-
 .content__images-pictures {
   max-width: 100%;
 }
-
 
 .content__images-pics {
   display: grid;
@@ -264,19 +258,19 @@
     "tape books ice"
     "tape street street";
   gap: 20px;
-  max-height: 1091px;
-  max-width: 1024px;
   box-sizing: border-box;
   padding-block-start: 20px;
 }
 
+.images__size {
+  max-inline-size: 100%;
+  min-block-size: 100%;
+}
 
 .images__sunset {
   grid-area: sunset;
   grid-column: 1 / 3;
   grid-row: 1 / 2;
-  width: 649px;
-  height: 260px;
   object-fit: cover;
 }
 
@@ -284,8 +278,6 @@
   grid-area: ice;
   grid-column: 3 / 4;
   grid-row: 1 / 3;
-  width: 315px;
-  height: 595px;
   object-fit: cover;
 }
 
@@ -293,17 +285,13 @@
   grid-area: books;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  width: 315px;
-  height: 315px;
   object-fit: cover;
 }
 
 .images__tape {
   grid-area: tape;
-  grid-column: 1 / 3;
+  grid-column: 1 / 2;
   grid-row: 2 / 4;
-  width: 315px;
-  height: 768px;
   object-fit: cover;
 }
 
@@ -311,71 +299,25 @@
   grid-area: street;
   grid-column: 2 / 4;
   grid-row: 3 / 4;
-  width: 649px;
-  height: 428px;
   object-fit: cover;
 }
 
 .content__footer {
-  max-width: 1440px;
-  position: relative;
-  background-image: none;
-  padding: 0;
-}
 
-.content__footer::after {
-  content: '';
-  background-image: url("../images/Rectangle 79.png");
-  background-size: cover;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  opacity: 1;
-  top: 723px;
-  left: 20px;
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-}
-
-.content__footer::before {
-  content: '';
-  background-image: url("../images/Rectangle 79.png");
-  background-size: cover;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  opacity: 1;
-  top: 20px;
-  left: 979px;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  transform: scale(-1);
 }
 
 .ending {
   background-color: var(--bg-color);
   font-weight: 700;
-  font-size: 157px;
+  font-size: clamp(7.25rem, 4.805rem + 10.433vw, 9.813rem);
   line-height: 83%;
   color: var(--primary-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  padding: 319px 277px;
-  margin-block: 0;
+  text-align: center;
+  padding-block: clamp(17.875rem, 7.319rem + 45.038vw, 28.938rem);
 }
 
 @media (max-width: 768px) {
-
-
-  .header::after {
-    content: '';
-    background-image: url(../images/Лампочка.png);
-    background-size: cover;
-    position: absolute;
-    max-width: 52px;
-    max-height: 26px;
-    Top: 20px;
-    Left: 687px;
-  }
 
   .idiom {
     max-width: 364px;
@@ -426,15 +368,6 @@
     background-color: var(--accent-color);
     font-weight: 700;
     line-height: 23px;
-  }
-
-  .content {
-    padding: 20px 20px 0 20px;
-    max-width: 768px;
-  }
-
-  .content__quiestion {
-    padding: 0;
   }
 
   .hard__concentrate-questuion {
@@ -525,7 +458,7 @@
 
   .advice__simple-table__yet {
     list-style-type: none;
-    padding-inline-start: 0px;
+    padding-inline-start: 0;
   }
 
   .content__images {
@@ -536,35 +469,8 @@
     margin-inline: 0;
   }
 
-
   .content__images-pics {
     padding-inline: 0;
-
-  }
-
-  .images__sunset {
-    width: 479px;
-    height: 192px;
-  }
-
-  .images__ice {
-    width: 229px;
-    height: 441px;
-  }
-
-  .images__books {
-    width: 230px;
-    height: 230px;
-  }
-
-  .images__tape {
-    width: 229px;
-    height: 568px;
-  }
-
-  .images__street {
-    width: 479px;
-    height: 318px;
   }
 
   .content__footer {
@@ -572,38 +478,9 @@
     padding-block-start: 80px;
     max-width: 768px
   }
-
-
-  .content__footer::before {
-    top: 20px;
-    left: 723px;
-  }
-
-  .content__footer::after {
-    content: "";
-    display: inline;
-    position: absolute;
-    background-image: url("../images/Rectangle 79.png");
-    top: 979px;
-    left: 20px;
-    width: 25px;
-  }
-
-  .ending {
-    font-size: 120px;
-    color: var(--primary-color);
-    padding: 0;
-    margin-block: 462px;
-    text-align: center;
-  }
 }
 
 @media (max-width: 375px) {
-  .table__of-contents {
-    font-size: 116px;
-    margin: 129px 10px 0 10px;
-    letter-spacing: 11px;
-  }
 
   .header::after {
     Top: 10px;
@@ -701,38 +578,12 @@
 
   .content__images-pictures {
     margin-inline: 10px;
-
   }
 
   .content__images-pics {
     display: block;
     padding-inline: 10px;
     max-height: 1400px;
-  }
-
-  .images__sunset {
-    width: 355px;
-    height: 142px;
-  }
-
-  .images__ice {
-    width: 355px;
-    height: 355px;
-  }
-
-  .images__books {
-    width: 355px;
-    height: 355px;
-  }
-
-  .images__tape {
-    width: 355px;
-    height: 237px;
-  }
-
-  .images__street {
-    width: 355px;
-    height: 237px;
   }
 
   .content__footer {
@@ -751,10 +602,4 @@
     left: 10px;
   }
 
-  .ending {
-    font-size: 116px;
-    text-align: center;
-    padding: 0;
-    padding-block: 286px;
-  }
 }
