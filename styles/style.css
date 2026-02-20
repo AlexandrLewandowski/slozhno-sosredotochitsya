@@ -22,44 +22,53 @@
   position: relative;
 }
 
-.decorated-zone::before {
-  content: "";
-  background-image: url("../images/Rectangle 79.png");
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  opacity: 1;
-  top: 20px;
-  left: 979px;
-  transform: scale(-1);
-}
-
-.decorated-zone::after {
-  content: "";
-  background-image: url("../images/Rectangle 79.png");
-  width: 25px;
-  height: 25px;
-}
-
-.decorated-zone__item::before {
+.decorated-zone__item {
   content: "REC";
-  color: var(--accent-color);
-  position: relative;
-  top: 24px;
-  left: 920px;
-  font-size: var(--font-size-base);
-  font-family: var(--font-main);
+  position: absolute;
+  display: inline-block;
+  color: var(--accent-color, #ff0070);
+  font-size: 18px;
+  line-height: 25px;
+  inset-block-start: clamp(0.625rem, 0.029rem + 2.54vw, 1.25rem);
+  inset-inline-end: clamp(2.375rem, 1.779rem + 2.54vw, 3rem);
 }
 
 .decorated-zone__item::after {
   content: "";
   position: absolute;
-  background-image: url("../images/Лампочка.png");
-  width: 25px;
-  height: 25px;
-  top: 22px;
-  left: 980px;
-  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: var(--accent-color, #ff0070);
+  filter: drop-shadow(0px 0px 4px var(--accent-color, #ff0070));
+  block-size: 9px;
+  inline-size: 9px;
+  inset-inline-end: -20px;
+  inset-block-start: 9px;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  --inset-value: var(
+    --inline-section-padding,
+    clamp(10px, 0.029rem + 2.54vw, 20px)
+  );
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  border-top: 1px solid var(--accent-color, #ff0070);
+  border-right: 1px solid var(--accent-color, #ff0070);
+  inset-block-start: var(--inset-value);
+  inset-inline-end: var(--inset-value);
+}
+
+.decorated-zone::after {
+  border-bottom: 1px solid var(--accent-color, #ff0070);
+  border-left: 1px solid var(--accent-color, #ff0070);
+  inset-block-end: var(--inset-value);
+  inset-inline-start: var(--inset-value);
 }
 
 .header__theme-menu {
@@ -68,7 +77,6 @@
 
 .header__theme-menu-button {
   font-size: var(--font-size-base);
-  font-family: var(--font-main);
   color: var(--accent-color);
   cursor: pointer;
   background-color: inherit;
@@ -96,7 +104,7 @@
 
 .table__of-contents {
   font-weight: 700;
-  font-size: 157px;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 83%;
   color: var(--primary-color);
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -235,7 +243,7 @@
 
 .advice__simple-table__yet {
   list-style-type: none;
-  padding-inline-start: 0px;
+  padding-inline-start: 0;
 }
 
 .content__images {
@@ -244,7 +252,6 @@
 
 .content__images-pictures {
   max-width: 100%;
-  margin-inline: 20px;
 }
 
 
@@ -373,7 +380,6 @@
   .idiom {
     max-width: 364px;
     height: 117px;
-    position: relative;
     top: 81px;
     left: 384px;
   }
